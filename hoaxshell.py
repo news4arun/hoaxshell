@@ -409,7 +409,7 @@ class Hoaxshell(BaseHTTPRequestHandler):
 
 			self.send_response(200)
 			self.send_header('Content-type', 'text/javascript; charset=UTF-8')
-			self.send_header('Access-Control-Allow-Origin', '*')
+			self.send_header('Access-Control-Allow-Origin', 'testsite')
 			self.end_headers()
 			self.wfile.write(bytes('OK', "utf-8"))
 			Hoaxshell.execution_verified = True
@@ -429,7 +429,7 @@ class Hoaxshell(BaseHTTPRequestHandler):
 
 			self.send_response(200)
 			self.send_header('Content-type', 'text/javascript; charset=UTF-8')
-			self.send_header('Access-Control-Allow-Origin', '*')
+			self.send_header('Access-Control-Allow-Origin', 'testsite')
 			self.end_headers()
 
 			if len(Hoaxshell.command_pool):
@@ -465,7 +465,7 @@ class Hoaxshell(BaseHTTPRequestHandler):
 
 			try:
 				self.send_response(200)
-				self.send_header('Access-Control-Allow-Origin', '*')
+				self.send_header('Access-Control-Allow-Origin', 'testsite')
 				self.send_header('Content-Type', 'text/plain')
 				self.end_headers()
 				self.wfile.write(b'OK')
